@@ -72,6 +72,16 @@ const BottomNav = () => {
             <FaLaptopCode />
           </a>
           <a
+            href="#about"
+            className={`rounded-full text-2xl  p-2 ${
+              activeSection === "about"
+                ? "bg-cyan-400 text-black border-blue-700"
+                : ""
+            }`}
+          >
+            <AiFillInfoCircle />
+          </a>
+          <a
             href="#project"
             className={`rounded-full text-2xl  p-2 ${
               activeSection === "project"
@@ -81,16 +91,7 @@ const BottomNav = () => {
           >
             <CgWebsite />
           </a>
-          {/* <a
-            href="#about"
-            className={`rounded-full text-2xl  p-2 ${
-              activeSection === "about"
-                ? "bg-cyan-400 text-black border-blue-700"
-                : ""
-            }`}
-          >
-            <AiFillInfoCircle />
-          </a> */}
+
           <a
             href="#contact"
             className={`rounded-full text-2xl  p-2 ${

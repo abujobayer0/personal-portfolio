@@ -124,14 +124,15 @@ const Header = () => {
             <Link href="#home">Home</Link>
           </Item>
           <Item>
-            <Link href="#project">Projects </Link>
-          </Item>
-          <Item>
             <Link href="#skills">Skills </Link>
           </Item>
-          {/* <Item>
-            <Link href="#about">About</Link>
-          </Item> */}
+          <Item>
+            <Link href="#about">About </Link>
+          </Item>
+          <Item>
+            <Link href="#project">Projects </Link>
+          </Item>
+
           <Item>
             <Link href="#contact">Contact</Link>
           </Item>
@@ -148,14 +149,16 @@ const Header = () => {
             <Link href="#home">Home</Link>
           </Item>
           <Item onClick={handleClick}>
-            <Link href="#project">Projects</Link>
-          </Item>
-          <Item onClick={handleClick}>
             <Link href="#skills">Skills</Link>
           </Item>
-          {/* <Item onClick={handleClick}>
+          <Item onClick={handleClick}>
             <Link href="#about">About</Link>
-          </Item> */}
+          </Item>
+
+          <Item onClick={handleClick}>
+            <Link href="#project">Projects</Link>
+          </Item>
+
           <Item onClick={handleClick}>
             <Link href="#contact">Contact</Link>
           </Item>

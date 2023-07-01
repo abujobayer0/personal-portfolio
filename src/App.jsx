@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import "./App.css";
+import About from "./components/about";
 import Cursor from "./components/animated/cursor/curosr";
 import BottomNav from "./shared/bottomNav";
 import Contact from "./shared/contact";
@@ -13,6 +15,7 @@ function App() {
       <Stack />
       <Hero />
       <Work />
+      <About />
       <Projects />
       <Contact />
       <BottomNav />
