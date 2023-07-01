@@ -3,7 +3,10 @@ import resume from "../../assets/resume/abu talha resume.pdf";
 
 const About = () => {
   return (
-    <section id="about" className="bgWhite my-10 dark:bg-gray-900">
+    <section
+      id="about"
+      className="bgWhite my-10 dark:bg-gray-900 max-w-7xl mx-auto"
+    >
       <div className="relative flex">
         <div className="min-h-screen lg:w-1/3"></div>
         <div className="hidden w-3/4 min-h-screen bg-[#161f42b0] rounded  dark:bg-gray-800 lg:block"></div>
@@ -21,7 +24,7 @@ const About = () => {
             />
 
             <div className="mt-8 lg:px-10 lg:mt-0">
-              <h1 className="text-2xl font-semibold text-gray-200 dark:textWhite lg:w-72">
+              <h1 className="text-3xl font-semibold text-gray-200 dark:textWhite lg:w-96">
                 Abu Talha Md Jobayer
               </h1>
               <p className="text-gray-300">MERN Stack Web Developer</p>

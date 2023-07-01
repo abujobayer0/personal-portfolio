@@ -4,7 +4,7 @@ const Work = () => {
   return (
     <section
       id="skills"
-      className="max-w-7xl relative flex px-5 justify-center flex-col my-10 mx-auto items-center"
+      className="max-w-7xl relative flex px-5 justify-center flex-col mt-44 mx-auto items-center"
     >
       {" "}
       <span className="max-w-[1300px]  md:h-60  h-60 bg-gradient-to-r  opacity-30 from-blue-800 to-blue-800 rounded absolute filter blur-[200px] -z-10 top-[500px] md:top-[150px] left-10"></span>
@@ -37,7 +37,7 @@ const Work = () => {
       </h1>
       <span className="max-w-[1300px]  md:h-60  h-60 bg-gradient-to-r  opacity-30 from-indigo-800 to-blue-800 rounded absolute filter blur-[200px] -z-10 top-[900px] md:top-[500px] left-10"></span>
       <span className=" md:h-96 max-w-[1300px] h-60 bg-gradient-to-r  opacity-60 md:opacity-20 from-blue-800 to-blue-800 rounded absolute filter blur-[200px] -z-10 top-[1500px] md:top-[900px] left-10"></span>
-      <div className="grid grid-cols-2  my-5 justify-center items-center  justify-items-center  w-full md:grid-cols-3 gap-6 lg:grid-cols-4">
+      <div className="grid grid-cols-2  my-5 justify-center items-center  justify-items-center md:mb-60 w-full md:grid-cols-3 gap-6 lg:grid-cols-4">
         {BackEndWorks.map((item, indx) => (
           <div
             key={indx}

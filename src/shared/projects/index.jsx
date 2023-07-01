@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <section
       id="project"
-      className="flex max-w-7xl mx-auto relative flex-col gap-12"
+      className="flex mt-10 md:mt-44 max-w-7xl mx-auto relative flex-col gap-12"
     >
       <span className=" md:h-[100vh] max-w-[1300px] h-60 bg-gradient-to-r  opacity-30 from-blue-800 to-blue-800 rounded absolute filter blur-[200px] -z-10 top-[300px] md:top-[150px] left-10"></span>
       <h1 className="mx-auto w-full text-3xl md:text-5xl font-semibold text-cyan-400 my-10 text-center">
