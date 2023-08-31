@@ -1,156 +1,146 @@
+import { useState } from "react";
 import "./projects.css";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import reactImage from "../../assets/frontend/react.256x228.png";
-import "react-vertical-timeline-component/style.min.css";
-import { AiFillGithub } from "react-icons/ai";
+
 const Projects = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const tabData = [
+    {
+      title: "Frontend Development",
+      content: [
+        {
+          title: "Melodify Music Learning Platform",
+          para: "Unlock your musical potential with our innovative platform. Learn instruments, music theory, and composition through interactive lessons and personalized guidance.",
+          img: "https://i.ibb.co/d2pRmjq/screencapture-melodify-77a9c-firebaseapp-2023-06-28-12-34-33.png",
+        },
+        {
+          title: "Heaven Toy Store",
+          para: "Discover a world of imagination at our toy store. From classic favorites to the latest trends, find endless joy and endless playtime possibilities.",
+          img: "https://i.ibb.co/bNhk0n0/screencapture-heaven-9b467-web-app-2023-06-27-13-20-06.png",
+        },
+        {
+          title: "React mini Youtube",
+          para: "Discover a world of imagination at our toy store. From classic favorites to the latest trends, find endless joy and endless playtime possibilities.",
+          img: "https://user-images.githubusercontent.com/108220804/219965218-d322a2da-f2fd-4835-b861-fd01773209e3.png",
+        },
+        {
+          title: "Device Zone",
+          para: "Revolutionize shopping with our E-commerce platform. Explore a vast range of products, enjoy seamless navigation, and secure transactions for a convenient and delightful online shopping experience.",
+          img: "https://i.ibb.co/tM0RsXn/screencapture-device-zone-vercel-app-2023-08-31-16-38-08-1.png",
+        },
+        {
+          title: "Turkish Chef Hunter Recipe",
+          para: "Embark on a culinary adventure with Chef Hunter's recipe website. Explore a treasure trove of mouthwatering recipes, cooking tips, and culinary inspiration.",
+          img: "https://i.ibb.co/TTgk3sx/screencapture-turkish-b4e55-web-app-2023-06-27-21-07-39.png",
+        },
+      ],
+    },
+    {
+      title: "MERN Stack Development",
+      content: [
+        {
+          title: "Melodify Music Learning Platform",
+          para: "Unlock your musical potential with our innovative platform. Learn instruments, music theory, and composition through interactive lessons and personalized guidance.",
+          img: "https://i.ibb.co/d2pRmjq/screencapture-melodify-77a9c-firebaseapp-2023-06-28-12-34-33.png",
+        },
+        {
+          title: "Device Zone",
+          para: "Revolutionize shopping with our E-commerce platform. Explore a vast range of products, enjoy seamless navigation, and secure transactions for a convenient and delightful online shopping experience.",
+          img: "https://i.ibb.co/tM0RsXn/screencapture-device-zone-vercel-app-2023-08-31-16-38-08-1.png",
+        },
+
+        {
+          title: "Heaven Toy Store",
+          para: "Discover a world of imagination at our toy store. From classic favorites to the latest trends, find endless joy and endless playtime possibilities.",
+          img: "https://i.ibb.co/bNhk0n0/screencapture-heaven-9b467-web-app-2023-06-27-13-20-06.png",
+        },
+        {
+          title: "Turkish Chef Hunter Recipe",
+          para: "Embark on a culinary adventure with Chef Hunter's recipe website. Explore a treasure trove of mouthwatering recipes, cooking tips, and culinary inspiration.",
+          img: "https://i.ibb.co/TTgk3sx/screencapture-turkish-b4e55-web-app-2023-06-27-21-07-39.png",
+        },
+      ],
+    },
+    {
+      title: "React Native Development",
+      content: [
+        {
+          title: "Melodify Music Learning Platform",
+          para: "Unlock your musical potential with our innovative platform. Learn instruments, music theory, and composition through interactive lessons and personalized guidance.",
+          img: "https://i.ibb.co/d2pRmjq/screencapture-melodify-77a9c-firebaseapp-2023-06-28-12-34-33.png",
+        },
+        {
+          title: "Heaven Toy Store",
+          para: "Discover a world of imagination at our toy store. From classic favorites to the latest trends, find endless joy and endless playtime possibilities.",
+          img: "https://i.ibb.co/bNhk0n0/screencapture-heaven-9b467-web-app-2023-06-27-13-20-06.png",
+        },
+      ],
+    },
+  ];
   return (
     <section
       id="project"
-      className="flex mt-10 md:mt-44 max-w-7xl mx-auto relative flex-col gap-12"
+      className="flex mt-10 md:mt-44  max-w-7xl mx-auto relative flex-col gap-12"
     >
       <span className=" md:h-[100vh] max-w-[1300px] h-60 bg-gradient-to-r  opacity-30 from-blue-800 to-blue-800 rounded absolute filter blur-[200px] -z-10 top-[300px] md:top-[150px] left-10"></span>
       <h1 className="mx-auto w-full text-3xl md:text-5xl font-semibold text-cyan-400 my-10 text-center">
         Projects
       </h1>
-      <VerticalTimeline>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: "#161f42b0", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  #161f42b0" }}
-          iconStyle={{ background: "#161f42b0", color: "#161f42b0" }}
-          icon={<img alt="" className="p-2" src={reactImage} />}
-        >
-          <div className="flex flex-col justify-center ">
-            <div className="relative flex flex-col md:flexRow  space-y-3 md:space-y-0 rounded-xl  p-3 w-full mx-auto border border-transparent ">
-              <div className="flex-none w-full md:w-96 h-96 image-wrapper -translate-y-4   hover:translate-y-150  mx-auto overflow-hidden  ">
+      <div className="flex flex-col px-5 md:px-0 w-full">
+        <div className="flex flex-col sm:flex-row sm:space-x-4 mb-4">
+          {tabData.map((tab, index) => (
+            <button
+              key={index}
+              className={`py-2 px-4 rounded-md mb-2 sm:mb-0 ${
+                index === activeTab
+                  ? "bg-cyan-400 text-white"
+                  : "bg-[#161f42b0] text-cyan-400"
+              } transition duration-300 ease-in-out`}
+              onClick={() => setActiveTab(index)}
+            >
+              {tab.title}
+            </button>
+          ))}
+        </div>
+        <div className="bg-[#161f42b0] grid grid-cols-2 lg:grid-cols-3 gap-4 p-4 text-black rounded-md shadow-md">
+          {tabData[activeTab].content.map((item, index) => (
+            <div
+              key={index}
+              className="border border-cyan-800  p-6 rounded-md shadow-md"
+            >
+              <div className="mb-4 w-96  h-60 overflow-hidden">
                 <img
-                  src="https://i.ibb.co/d2pRmjq/screencapture-melodify-77a9c-firebaseapp-2023-06-28-12-34-33.png"
-                  alt="pic"
-                  className="rounded-md hover:-translate-y-[70%]  transform w-full  image transition-all  duration-[5s] ease-in-out   "
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full hover:scale-105 duration-150 ease-in  rounded-md shadow-md"
                 />
               </div>
-              <div className="w-full bg-transparent flex flex-col justify-start items-start space-y-2 py-3">
-                <h3 className="font-black text-gray-200 md:text-3xl w-full text-xl">
-                  Melodify Music Learning Platform
-                </h3>
-                <p className="md:text-lg w-full text-gray-500 text-base ">
-                  Unlock your musical potential with our innovative platform.
-                  Learn instruments, music theory, and composition through
-                  interactive lessons and personalized guidance.
-                </p>
-                <div className="flex items-center gap-6">
-                  <a
-                    target="blank"
-                    href="https://melodify-77a9c.firebaseapp.com/"
-                    className="text-xl font-black  px-5 btn text-center py-2"
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    href="
-                  "
-                  >
-                    {/* <AiFillGithub className="text-4xl" /> */}
-                  </a>
-                </div>
+              <h2 className="text-xl font-semibold text-gray-200 mb-2">
+                {item.title}
+              </h2>
+              <p className="text-gray-300 mb-4">{item.para}</p>
+              <div className="flex space-x-4">
+                <a
+                  href={""}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="py-2 px-4 bg-cyan-400 text-white rounded-md hover:bg-cyan-600 transition duration-300 ease-in-out"
+                >
+                  Live Demo
+                </a>
+                <a
+                  href={""}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="py-2 px-4 bg-gray-800 text-white rounded-md hover:bg-gray-900 transition duration-300 ease-in-out"
+                >
+                  GitHub
+                </a>
               </div>
             </div>
-          </div>
-        </VerticalTimelineElement>
-
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: "#161f42b0", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  #161f42b0" }}
-          iconStyle={{ background: "#161f42b0", color: "#161f42b0" }}
-          icon={<img alt="" className="p-2" src={reactImage} />}
-        >
-          <div className="flex flex-col justify-center ">
-            <div className="relative flex flex-col md:flexRow  space-y-3 md:space-y-0 rounded-xl  p-3 w-full mx-auto border border-transparent ">
-              <div className="flex-none w-full md:w-96 h-96 image-wrapper -translate-y-4   hover:translate-y-150  mx-auto overflow-hidden  ">
-                <img
-                  src="https://i.ibb.co/bNhk0n0/screencapture-heaven-9b467-web-app-2023-06-27-13-20-06.png"
-                  alt="pic"
-                  className="rounded-md hover:-translate-y-[70%]  transform w-full  image transition-all  duration-[5s] ease-in-out   "
-                />
-              </div>
-              <div className="w-full bg-transparent flex flex-col justify-start items-start space-y-2 py-3">
-                <h3 className="font-black text-gray-200 md:text-3xl w-full text-xl">
-                  Heaven Toy Store
-                </h3>
-                <p className="md:text-lg w-full text-gray-500 text-base ">
-                  Discover a world of imagination at our toy store. From classic
-                  favorites to the latest trends, find endless joy and endless
-                  playtime possibilities.
-                </p>
-                <div className="flex items-center gap-6">
-                  <a
-                    target="blank"
-                    href="https://heaven-9b467.web.app/"
-                    className="text-xl font-black  px-5 btn text-center py-2"
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    href="
-                  "
-                  >
-                    {/* <AiFillGithub className="text-4xl" /> */}
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: "#161f42b0", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  #161f42b0" }}
-          iconStyle={{ background: "#161f42b0", color: "#161f42b0" }}
-          icon={<img alt="" className="p-2" src={reactImage} />}
-        >
-          <div className="flex flex-col justify-center ">
-            <div className="relative flex flex-col md:flexRow  space-y-3 md:space-y-0 rounded-xl  p-3 w-full mx-auto border border-transparent ">
-              <div className="flex-none w-full md:w-96 h-96 image-wrapper -translate-y-4   hover:translate-y-150  mx-auto overflow-hidden  ">
-                <img
-                  src="https://i.ibb.co/TTgk3sx/screencapture-turkish-b4e55-web-app-2023-06-27-21-07-39.png"
-                  alt="pic"
-                  className="rounded-md hover:-translate-y-[53%]  transform w-full  image transition-all  duration-[5s] ease-in-out   "
-                />
-              </div>
-              <div className="w-full bg-transparent flex flex-col justify-start items-start space-y-2 py-3">
-                <h3 className="font-black text-gray-200 md:text-3xl w-full text-xl">
-                  Turkish Chef Hunter Recipe
-                </h3>
-                <p className="md:text-lg w-full text-gray-500 text-base ">
-                  Embark on a culinary adventure with Chef Hunter's recipe
-                  website. Explore a treasure trove of mouthwatering recipes,
-                  cooking tips, and culinary inspiration.
-                </p>
-                <div className="flex items-center gap-6">
-                  <a
-                    target="blank"
-                    href="https://turkish-b4e55.web.app/"
-                    className="text-xl font-black  px-5 btn text-center py-2"
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    href="
-                  "
-                  >
-                    {/* <AiFillGithub className="text-4xl" /> */}
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </VerticalTimelineElement>
-      </VerticalTimeline>
+          ))}
+        </div>
+      </div>
       <span className="max-w-[1300px] md:h-[100vh]  h-60 bg-gradient-to-r  opacity-30 from-blue-800 to-blue-800 rounded absolute filter blur-[200px] -z-10 top-[900px] md:top-[1100px] left-10"></span>
     </section>
   );

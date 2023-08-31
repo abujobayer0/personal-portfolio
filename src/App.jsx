@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import "./App.css";
 import About from "./components/about";
 import Cursor from "./components/animated/cursor/curosr";

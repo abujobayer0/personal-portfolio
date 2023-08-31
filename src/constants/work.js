@@ -6,15 +6,18 @@ import mui from "../assets/frontend/icons8-material-ui-48.png";
 import tailwind from "../assets/frontend/icons8-tailwind-css-48.png";
 import styledComponent from "../assets/frontend/styled-components-svgrepo-com.png";
 import routerReact from "../assets/frontend/react-router.256x140.png";
+import redux from "../assets/frontend/redux_png.png";
 import bootsrap from "../assets/frontend/bootstrap.png";
 const FrontEndWorks = [
   { name: "HTML", image: html, progress: 80 },
   { name: "CSS", image: css, progress: 80 },
   { name: "REACT", image: react, progress: 80 },
+  { name: "REACT NATIVE", image: react, progress: 80, TYPE: "app" },
   { name: "JAVASCRIPT", image: js, progress: 80 },
   { name: "TAILWIND CSS", image: tailwind, progress: 80 },
   { name: "MATERIAL UI", image: mui, progress: 80 },
   { name: "REACT ROUTER", image: routerReact, progress: 80 },
+  { name: "REDUX", image: redux, progress: 80 },
   { name: "STYLED COMPONENT", image: styledComponent, progress: 80 },
   { name: "BOOTSRAP", image: bootsrap, progress: 80 },
   {

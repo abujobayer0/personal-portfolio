@@ -27,7 +27,7 @@ const Work = () => {
               </div>
             </div>
             <div className="mt-4 text-gray-500 font-bold text-sm">
-              #Web Development
+              {item.TYPE === "app" ? "#App Development" : "#Web Development"}
             </div>
           </div>
         ))}
@@ -52,7 +52,7 @@ const Work = () => {
               </div>
             </div>
             <div className="mt-4 text-gray-500 font-bold text-sm">
-              #Web Development
+              {item.TYPE === "app" ? "#App Development" : "#Web Development"}
             </div>
           </div>
         ))}
