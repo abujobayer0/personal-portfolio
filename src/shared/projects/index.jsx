@@ -50,6 +50,11 @@ const Projects = () => {
         },
 
         {
+          title: "Employe Management",
+          para: "Discover a world of imagination at our toy store. From classic favorites to the latest trends, find endless joy and endless playtime possibilities.",
+          img: "https://i.ibb.co/d2dMSW8/screencapture-task-alpha-five-vercel-app-search-2023-08-31-16-59-47-1.png",
+        },
+        {
           title: "Heaven Toy Store",
           para: "Discover a world of imagination at our toy store. From classic favorites to the latest trends, find endless joy and endless playtime possibilities.",
           img: "https://i.ibb.co/bNhk0n0/screencapture-heaven-9b467-web-app-2023-06-27-13-20-06.png",
@@ -65,14 +70,9 @@ const Projects = () => {
       title: "React Native Development",
       content: [
         {
-          title: "Melodify Music Learning Platform",
-          para: "Unlock your musical potential with our innovative platform. Learn instruments, music theory, and composition through interactive lessons and personalized guidance.",
-          img: "https://i.ibb.co/d2pRmjq/screencapture-melodify-77a9c-firebaseapp-2023-06-28-12-34-33.png",
-        },
-        {
-          title: "Heaven Toy Store",
+          title: "Citizenship",
           para: "Discover a world of imagination at our toy store. From classic favorites to the latest trends, find endless joy and endless playtime possibilities.",
-          img: "https://i.ibb.co/bNhk0n0/screencapture-heaven-9b467-web-app-2023-06-27-13-20-06.png",
+          img: "https://i.ibb.co/kD7kcbS/Screenshot-2023-08-25-23-29-06-667-host-exp-exponent-iphone12black-portrait.png",
         },
       ],
     },
@@ -108,7 +108,11 @@ const Projects = () => {
               key={index}
               className="border border-cyan-800  p-6 rounded-md shadow-md"
             >
-              <div className="mb-4 w-96  h-60 overflow-hidden">
+              <div
+                className={`mb-4 w-96  ${
+                  activeTab === 2 ? "h-fit" : "h-60"
+                } overflow-hidden`}
+              >
                 <img
                   src={item.img}
                   alt={item.title}
