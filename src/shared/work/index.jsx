@@ -6,7 +6,6 @@ const Work = () => {
       id="skills"
       className="max-w-7xl relative flex px-5 justify-center flex-col mt-44 mx-auto items-center"
     >
-      {" "}
       <span className="max-w-[1300px]  md:h-60  h-60 bg-gradient-to-r  opacity-30 from-blue-800 to-blue-800 rounded absolute filter blur-[200px] -z-10 top-[500px] md:top-[150px] left-10"></span>
       <h1 className="text-3xl md:text-5xl font-semibold ">What I Do</h1>
       <h1 className="text-3xl my-10 text-cyan-400 md:text-5xl font-semibold  ">

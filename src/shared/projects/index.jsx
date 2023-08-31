@@ -102,21 +102,31 @@ const Projects = () => {
             </button>
           ))}
         </div>
-        <div className="bg-[#161f42b0] grid grid-cols-2 lg:grid-cols-3 gap-4 p-4 text-black rounded-md shadow-md">
+        <div className=" grid grid-cols-2 lg:grid-cols-3 gap-4 p-4 text-black rounded-md shadow-md">
           {tabData[activeTab].content.map((item, index) => (
             <div
               key={index}
-              className="border border-cyan-800  p-6 rounded-md shadow-md"
+              className="bg-[#161f42b0]  p-6 rounded-md shadow-md"
             >
               <div
-                className={`mb-4 w-96  ${
+                className={`mb-4 w-96  relative ${
                   activeTab === 2 ? "h-fit" : "h-60"
                 } overflow-hidden`}
               >
+                {activeTab === 2 && (
+                  <div className="flex justify-between z-10 w-full bottom-0 absolute items-end h-full ">
+                    <span className="w-20 h-20 text-4xl flex justify-center items-center text-[#fff] cursor-pointer rounded-full bg-[#161f42b0]">
+                      {"<"}
+                    </span>
+                    <span className="w-20 h-20 text-4xl flex justify-center items-center text-[#fff] cursor-pointer rounded-full bg-[#161f42b0]">
+                      {">"}
+                    </span>
+                  </div>
+                )}
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full hover:scale-105 duration-150 ease-in  rounded-md shadow-md"
+                  className={`w-full hover:scale-105 duration-150 ease-in opacity-50 hover:opacity-100 rounded-md shadow-md`}
                 />
               </div>
               <h2 className="text-xl font-semibold text-gray-200 mb-2">
@@ -124,14 +134,16 @@ const Projects = () => {
               </h2>
               <p className="text-gray-300 mb-4">{item.para}</p>
               <div className="flex space-x-4">
-                <a
-                  href={""}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="py-2 px-4 bg-cyan-400 text-white rounded-md hover:bg-cyan-600 transition duration-300 ease-in-out"
-                >
-                  Live Demo
-                </a>
+                {activeTab !== 2 && (
+                  <a
+                    href={""}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-2 px-4  btn text-white rounded-md  transition duration-300 ease-in-out"
+                  >
+                    Live Demo
+                  </a>
+                )}
                 <a
                   href={""}
                   target="_blank"
