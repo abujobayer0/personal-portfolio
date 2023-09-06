@@ -46,7 +46,7 @@ const About = () => {
 
                 <div className="flex flex-wrap justify-center items-center gap-10">
                   <a
-                    href="https://www.linkedin.com/in/atm-jobayer/"
+                    href="https://www.linkedin.com/in/atmjobayer/"
                     className="hover:p-2 transition-all ease-in-out duration-150 hover:rounded-full hover:border border-cyan-500"
                   >
                     <FaLinkedin className="text-2xl" />

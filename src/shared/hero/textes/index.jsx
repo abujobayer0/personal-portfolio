@@ -78,7 +78,7 @@ const Textes = () => {
             <span>{">"}</span>
           </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-4 ">
-            <a href="https://www.linkedin.com/in/atm-jobayer/">
+            <a href="https://www.linkedin.com/in/atmjobayer/">
               <AiFillLinkedin className=" text-3xl md:text-2xl hover:text-cyan-400 cursor-pointer" />
             </a>
             <a href="https://www.facebook.com/abutalhazubayermunna">
